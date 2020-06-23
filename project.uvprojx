@@ -335,7 +335,7 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls></MiscControls>
+              <MiscControls>--c99 -D__MICROLIB</MiscControls>
               <Define></Define>
               <Undefine></Undefine>
               <IncludePath></IncludePath>
@@ -372,7 +372,7 @@
             <ScatterFile></ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
-            <Misc></Misc>
+            <Misc>--diag_suppress=L6329</Misc>
             <LinkerInputFile></LinkerInputFile>
             <DisabledWarnings></DisabledWarnings>
           </LDads>
@@ -398,19 +398,29 @@
               <FilePath>.\stm32l476xx.h</FilePath>
             </File>
             <File>
-              <FileName>SysClock.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\SysClock.c</FilePath>
-            </File>
-            <File>
               <FileName>LED.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\LED.c</FilePath>
             </File>
             <File>
-              <FileName>EXTI.c</FileName>
+              <FileName>SysClock.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\EXTI.c</FilePath>
+              <FilePath>.\SysClock.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\UART.c</FilePath>
+            </File>
+            <File>
+              <FileName>pins.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\pins.txt</FilePath>
+            </File>
+            <File>
+              <FileName>UART_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\UART_printf.c</FilePath>
             </File>
           </Files>
         </Group>

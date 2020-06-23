@@ -8,13 +8,14 @@
 //       PE8 is also the TIM1_CH1N for ADC Triggers.
 //******************************************************************************************
 void LED_Init(void){
-	/* Enable GPIOs clock */ 	
+	
+	// Enable the peripheral clock of GPIO Port	
 	RCC->AHB2ENR |=   RCC_AHB2ENR_GPIOBEN | RCC_AHB2ENR_GPIOEEN;
 	
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	// LD4 Red = PB2
 	///////////////////////////////////////////////////////////////////////////////////////////////
-	// GPIO Mode: Input(00, reset), Output(01), AlterFunc(10), Analog(11, reset)
+	// GPIO Mode: Input(00), Output(01), AlterFunc(10), Analog(11, reset)
 	GPIOB->MODER = ~(3U<<(2*2));  
 	GPIOB->MODER |= 1U<<(2*2);      //  Output(01)
 	
@@ -31,7 +32,7 @@ void LED_Init(void){
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	// LD5 Green = PE8
 	///////////////////////////////////////////////////////////////////////////////////////////////
-	// GPIO Mode: Input(00, reset), Output(01), AlterFunc(10), Analog(11, reset)
+	// GPIO Mode: Input(00), Output(01), AlterFunc(10), Analog(11, reset)
 	GPIOE->MODER = ~(3U<<(2*8));  
 	GPIOE->MODER |= 1U<<(2*8);      //  Output(01)
 	
