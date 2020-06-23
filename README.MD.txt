@@ -1,1 +1,1 @@
-Push joystick center to toggle the RED led
+This is a template project.
